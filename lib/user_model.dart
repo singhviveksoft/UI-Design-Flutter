@@ -6,4 +6,12 @@ class User {
     required this.name,
     required this.urlImage,
   });
+  @override
+  String toString() {
+    // TODO: implement toString
+    return super.toString();
+  }
+  @override
+  // TODO: implement hashCode
+  int get hashCode => super.hashCode;
 }

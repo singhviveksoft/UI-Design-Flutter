@@ -4,6 +4,8 @@ import 'package:ui_design/profile_detail_page.dart';
 import 'package:ui_design/user_data.dart';
 import 'package:ui_design/user_detail.dart';
 
+import 'aspect_ratio.dart';
+
 class DetailPage extends StatefulWidget {
   @override
   State<DetailPage> createState() => _DetailPageState();
@@ -34,12 +36,13 @@ class _DetailPageState extends State<DetailPage> {
               padding: const EdgeInsets.all(10.0),
               child: Column(children: [
                 InkWell(
-                  onTap: (){
-                    Navigator.push(
-              context, MaterialPageRoute(builder: (context) => UserDetailPage()));
-                  },
-                  
-                  child: BoxDecorationWidget()),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => UserDetailPage()));
+                    },
+                    child: BoxDecorationWidget()),
                 const SizedBox(
                   height: 20.0,
                 ),
@@ -57,15 +60,22 @@ class _DetailPageState extends State<DetailPage> {
                   height: 20.0,
                 ),
                 InkWell(
-                  onTap: (){
-                     Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Profile()));
-                  },
-                  child: DiscriptionWidget()),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Profile()));
+                    },
+                    child: DiscriptionWidget()),
                 const SizedBox(
                   height: 20.0,
                 ),
-                DiscriptionWidget(),
+                InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AspectRatioWidget()));
+                    },
+                    child: DiscriptionWidget()),
                 const SizedBox(
                   height: 20.0,
                 ),
